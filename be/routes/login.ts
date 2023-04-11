@@ -38,7 +38,7 @@ router.post("/", verify(LoginRequestSchema), async (req: Request, res: Response)
     return res.sendStatus(500);
   }
   
-  const data: UserType = result
+  const data = result
   const user = new User(data);
   await user.save()
   
